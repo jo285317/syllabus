@@ -8,7 +8,7 @@ Declarations notify the compiler about symbols used in the program and their typ
 
 - `funcdecl` (FuncDecl) - add each function to the current scope in the symbol table (addFunction), then create a new scope and visit the function's block.  Be sure to add the function to the current scope _before_ creating a new scope. Also, be sure to restore the state once the function is processed.
 
-- `formals` (TypedIdent) - save each formal parameter's declaration node in the new scope created for the function.  Function parameters are local to the function.
+- `formals` (TypedIdent) - save each formal parameter's declaration node in the new scope created for the function.  Function parameters are local to the function. Use addVariable here
 
 ## Expressions
 
